@@ -1,7 +1,7 @@
 # Less2Scss
 ![Logo](http://i.imgur.com/8WZuHGV.png)
 ## What is this?
-Less2Scss is a simple PHP aplication that will help you convert less to sass. Keep in mind it is not always right therefore you need some manual corrections. I will keep improving the program and try to spot more changes.
+Less2Scss is a simple PHP aplication that will help you convert less to sass. Keep in mind it is not always right therefore it needs some manual corrections. I will keep improving the program and try to spot more changes.
 
 Built with Yeoman and [Yeoman-php](https://github.com/Bradleycorn/generator-php)
 ## Run app
