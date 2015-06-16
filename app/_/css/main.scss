@@ -1,0 +1,88 @@
+@import "compass";
+@import "compass/reset";
+
+$mode: 1; // 0 for dark mode
+
+$light: #f2f2f2;
+$dark: #313131;
+
+@if $mode == 0{
+	$light: #313131;
+	$dark: #f2f2f2;
+
+}
+
+$brand-primary: #13A6EC;
+
+$bg-color: $light;
+$border-color: darken($light, 7 );
+
+html{
+	background-color: $bg-color;
+	color: $dark;
+	font:{ 
+		family: Helvetica Neue,Helvetica,Arial,sans-serif;
+		size: 100%;
+		weight: 400;
+	}
+	height: 100%;
+	width: 100%;
+	box-sizing: border-box;
+}
+
+body{height: 100%;}
+
+form{
+	@include clearfix;
+}
+
+a{
+	color: rgba($brand-primary,.5);
+	text-decoration: none;
+	&:hover{
+		color: $brand-primary;
+	}
+}
+
+
+textarea{
+	background-color: lighten($bg-color, 5);
+	padding: 10px;
+	border: 1px solid $border-color;
+	margin: 5px 10px;
+	width: calc(50% - 42px);
+	height: 80vh;
+	float: left;
+	outline: none;
+	overflow-y: auto;
+	resize: none;
+	color: $dark;
+	@include border-radius(4px);
+
+	&:focus{
+		border-color: $brand-primary;
+	}
+}
+
+footer{
+	display: flex;
+	align-items: center;
+	background-color: $dark;
+	color: $light;
+	padding: 17px;
+	position: fixed;
+	bottom: 0; left: 0; right: 0;
+	.copyrights, .logo, .counter{
+		flex: 1;
+	}
+	.logo{text-align: center;}
+	.counter{
+		text-align: right;
+		font-weight: bold;
+		#count{color: $brand-primary;}
+	}
+}
+// SVG LOGO
+
+#Funnel{fill: $brand-primary;}
+#LESS,#SCSS{fill: $light;}
